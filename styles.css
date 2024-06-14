@@ -4,6 +4,9 @@ body {
     background-color: #f7f7f7;
     background-image: url('https://futurestartup.b-cdn.net/wp-content/uploads/2017/03/Brain-Station-23-1.jpg');
     font-family: 'Arial', sans-serif;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .container {
@@ -266,6 +269,12 @@ p {
     left: 44%;
     color: aquamarine;
     width: 132px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .modal{
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
