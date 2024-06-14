@@ -1,15 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 /* Custom styles for your site */
 body {
     background-color: #f7f7f7;
+    background-image: url('https://futurestartup.b-cdn.net/wp-content/uploads/2017/03/Brain-Station-23-1.jpg');
     font-family: 'Arial', sans-serif;
 }
 
 .container {
     background: white;
+    opacity: 0.95;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
 }
 
 h2 {
@@ -64,3 +66,208 @@ p {
     background-color: #007bff;
     color: white;
 }
+  .box {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      border: 1px solid currentcolor;
+      border-radius: 3px;
+      font-size: 30px;
+      padding: 1em;
+      position: relative;
+      margin-bottom: .25em;
+      vertical-align: top;
+      transition: .3s color, .3s border, .3s transform, .3s opacity;
+      &:hover {
+          color: #fff; 
+          background-color: rgba(0, 0, 0, .1);
+          font-size: 0;
+          padding: 0;
+          border-width: 3px;
+          line-height: 200px;
+          opacity: 1;
+          transform: scale(1.2);
+          z-index: 2;
+
+          [class*="loader-"] {
+              font-size: 70px;
+              line-height: 200px;
+          }
+      }
+  }
+
+  button {
+      display: inline-block;
+      background: transparent;
+      border: 2px solid currentcolor;
+      color: white;
+      padding: .5em 1em;
+      border-radius: 5px;
+      font-size: calc(16px + 2vw);
+
+  }
+
+  [class*="loader-"] {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      color: inherit;
+      vertical-align: middle;
+      pointer-events: none;
+  }
+
+  .loader-15 {
+      background: currentcolor;
+      position: relative;
+      animation: loader-15 1s ease-in-out infinite;
+      animation-delay: 0.4s;
+      width: .25em;
+      height: .5em;
+      margin: 0 .5em;
+      color: red;
+      transform: translate(-10%, -10%);
+
+      &:after,
+      &:before {
+          content: '';
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          background: inherit;
+          animation: inherit;
+      }
+
+      &:before {
+          right: .5em;
+          animation-delay: 0.2s;
+      }
+
+      &:after {
+          left: .5em;
+          animation-delay: 0.6s;
+      }
+  }
+
+  @keyframes loader-15 {
+
+      0%,
+      100% {
+          box-shadow: 0 0 0 currentcolor, 0 0 0 currentcolor;
+      }
+
+      50% {
+          box-shadow: 0 -.25em 0 currentcolor, 0 .25em 0 currentcolor;
+      }
+  }
+
+  .loader-section{
+    position: fixed;
+        /* Changed from absolute to fixed */
+        top: 0;
+        /* Add top property */
+        left: 0;
+        /* Add left property */
+        width: 100vw;
+        /* Cover full viewport width */
+        height: 100vh;
+        /* Cover full viewport height */
+        z-index: 99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* Center the loader both horizontally and vertically */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Black shadow with 50% opacity */
+  }
+
+  .loader-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black shadow with 50% opacity */
+    z-index: -1;
+  }
+
+
+
+  .loader-39 {
+      position: relative;
+      width: .15em;
+      height: .15em;
+      background-color: currentcolor;
+      border-radius: 100%;
+      animation: loader-39-1 30s infinite linear;
+      color: #f7f7f7;
+      font-size: 100px;
+
+      &:before,
+      &:after {
+          content: '';
+          border-radius: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+      }
+
+      &:before {
+          width: .3em;
+          height: 1em;
+          animation: loader-39-2 .8s linear infinite;
+      }
+
+      &:after {
+          width: 1em;
+          height: .3em;
+          animation: loader-39-2 1.2s linear infinite;
+      }
+  }
+
+  @keyframes loader-39-1 {
+      0% {
+          transform: rotate(0deg);
+      }
+
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+
+  @keyframes loader-39-2 {
+      0% {
+          box-shadow: 0.04em -0.04em 0 0.02em currentcolor;
+      }
+
+      25% {
+          box-shadow: 0.04em 0.04em 0 0.02em currentcolor;
+      }
+
+      50% {
+          box-shadow: -0.04em 0.04em 0 0.02em currentcolor;
+      }
+
+      75% {
+          box-shadow: -0.04em -0.04em 0 0.02em currentcolor;
+      }
+
+      100% {
+          box-shadow: 0.04em -0.04em 0 0.02em currentcolor;
+      }
+  }
+
+  .loader-text{
+    position: absolute;
+    top: 60%;
+    left: 44%;
+    color: aquamarine;
+    width: 132px;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
